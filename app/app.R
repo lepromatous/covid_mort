@@ -1,4 +1,3 @@
-setwd("/Users/timothywiemken/OneDrive - Pfizer/Documents/Research/covid_mort/app")
 
 source("both.R")
 source("both2.R")
@@ -10,17 +9,17 @@ library(tidyverse)
 library(RCurl)
 
     ui<-dashboardPage( skin = "purple",
-        dashboardHeader(title = "COVID-19 Mortality", titleWidth = 320,
-                        tags$li(a(target = "_blank", href = 'https://www.slu.edu/', img(src = 'slu.jpg',
-                                title = "Saint Louis University", height = "40px"),
-                                style = "padding-top:10px; padding-bottom:10px;"), class = "dropdown"),
-                        tags$li(a(target = "_blank", href = 'https://www.slu.edu/research/research-institute/big-ideas/ahead/index.php', img(src = 'ahead.jpg',
-                                title = "AHEAD Institute", height = "40px"),
-                                style = "padding-top:10px; padding-bottom:10px;"), class = "dropdown"),
-                        tags$li(a(target = "_blank", href = 'https://www.slu.edu/research/research-institute/big-ideas/ahead/index.php', img(src = 'sipc.png',
-                                title = "Systems Infection Prevention Center", height = "40px"),
-                                style = "padding-top:10px; padding-bottom:10px;"), class = "dropdown")),
-    
+        dashboardHeader(title = "COVID-19 Mortality", titleWidth = "100%"
+                        # tags$li(a(target = "_blank", href = 'https://www.slu.edu/', img(src = 'slu.jpg',
+                        #         title = "Saint Louis University", height = "40px"),
+                        #         style = "padding-top:10px; padding-bottom:10px;"), class = "dropdown"),
+                        # tags$li(a(target = "_blank", href = 'https://www.slu.edu/research/research-institute/big-ideas/ahead/index.php', img(src = 'ahead.jpg',
+                        #         title = "AHEAD Institute", height = "40px"),
+                        #         style = "padding-top:10px; padding-bottom:10px;"), class = "dropdown"),
+                        # tags$li(a(target = "_blank", href = 'https://www.slu.edu/research/research-institute/big-ideas/ahead/index.php', img(src = 'sipc.png',
+                        #         title = "Systems Infection Prevention Center", height = "40px"),
+                        #         style = "padding-top:10px; padding-bottom:10px;"), class = "dropdown")),
+        ),
         dashboardSidebar(width = 320,
             sidebarMenu(
                 br(),
@@ -41,7 +40,7 @@ library(RCurl)
                 HTML(paste(HTML('&emsp;'), "We used Twitter's Breakout Detection method")),
                 hr(),
                 HTML(paste(strong("Created by:"), "Timothy Wiemken, PhD", "Samson Niemotka, BS", "Christopher Prener, PhD", sep="<br/>")),
-                p(a("Email Us", target="_blank", href="mailto:timothy.wiemken@health.slu.edu")), 
+                p(a("Email Us", target="_blank", href="mailto:timothy.wiemken@pfizer.com")), 
                 hr(),
                 "Version 1.4, Jan 14, 2022"
             )),
